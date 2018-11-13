@@ -8,6 +8,8 @@ export default function MovieList(props) {
         <Movies
           key={movie.id}
           movie={movie}
+          title={movie.title}
+          overview={movie.overview}
         />)}
     </div>
   )
