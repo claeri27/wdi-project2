@@ -56,18 +56,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>movie grabber</h1>
         <nav className='nav'>
-          <button onClick={this.getPopular}>Popular</button>
-          <button onClick={this.getUpcoming}>Upcoming</button>
-          <button onClick={this.getNowPlaying}>Now Playing</button>
+          <h1>movie grabber</h1>
+          <button className='button' onClick={this.getPopular}>POPULAR</button>
+          <button className='button' onClick={this.getUpcoming}>UPCOMING</button>
+          <button className='button' onClick={this.getNowPlaying}>NOW PLAYING</button>
           <MovieForm
             input={this.state.input}
             onChange={this.handleChange}
-            onSubmit={this.getMovies}
+            onClick={this.getMovies}
           />
         </nav>
-        {this.state.movies ? <MovieList movies={this.state.movies}/> : null}
+        <div className='MovieList'>
+          {this.state.movies ? <MovieList movies={this.state.movies}/> : null}
+        </div>
       </div>
     );
   }

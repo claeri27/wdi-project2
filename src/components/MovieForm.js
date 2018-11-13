@@ -2,11 +2,9 @@ import React from 'react';
 
 export default function MovieForm(props) {
   return (
-    <form onSubmit={props.onSubmit}>
-      <div className='input'>
-        <input type='text' onChange={props.onChange} value={props.input}/>
-        <input type='submit' value="Submit!"/>
-      </div>
+    <form onClick={props.onClick}>
+      <input className='input' type='text' onChange={props.onChange} value={props.input}/>
+      <button className='inputsubmit'>Search!</button>
     </form>
   )
 }

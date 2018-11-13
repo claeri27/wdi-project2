@@ -2,31 +2,67 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: red;
+  align-items: center;
+  height: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  margin: 10px 20px 10px 20px;
+  font-size: 2.5em;
+}
+
+.button {
+  /* margin: 10px 10px 10px 10px; */
+  height: 60px;
+  padding: 0px;
+  width: 130px;
+  font-size: 1em;
+  /* border: 1px solid black; */
+  /* border-radius: 20px; */
+}
+
+form {
   display: flex;
-  flex-direction: column;
+  width: 600px;
+  text-align: right;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.input {
+  height: 20px;
+  width: 500px;
+  padding: 10px;
+  margin: 0px 5px 0px 0px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.inputsubmit {
+  height: 50px;
+  margin: 0px 5px 0px 5px;
+  padding: 0px;
+  width: 130px;
+  font-size: 1em;
+}
+
+.MovieList {
+  background: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 5px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Movie {
+  width: 342px;
+  height: 513px;
+  padding: 5px;
 }
