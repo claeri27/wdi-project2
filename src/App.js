@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { getMovies, getPopular, getUpcoming, getNowPlaying } from './services/movieapi';
+import { getMovies, getTopRated, getUpcoming, getNowPlaying } from './services/movieapi';
 import MovieForm from './components/MovieForm';
 import MovieList from './components/MovieList';
 
@@ -13,7 +13,7 @@ class App extends Component {
     }
     this.getMovies = this.getMovies.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.getPopular = this.getPopular.bind(this);
+    this.getTopRated = this.getTopRated.bind(this);
     this.getUpcoming = this.getUpcoming.bind(this);
     this.getNowPlaying = this.getNowPlaying.bind(this);
   }
@@ -35,8 +35,8 @@ class App extends Component {
     }
   }
 
-  async getPopular() {
-    const resp = await getPopular();
+  async getTopRated() {
+    const resp = await getTopRated();
     this.setState({ movies: resp.data.results });
     console.log(this.state.movies);
   }
@@ -58,9 +58,9 @@ class App extends Component {
       <div className="App">
         <nav className='nav'>
           <h1>movie grabber</h1>
-          <button className='button' onClick={this.getPopular}>POPULAR</button>
-          <button className='button' onClick={this.getUpcoming}>UPCOMING</button>
           <button className='button' onClick={this.getNowPlaying}>NOW PLAYING</button>
+          <button className='button' onClick={this.getUpcoming}>UPCOMING</button>
+          <button className='button' onClick={this.getTopRated}>TOP RATED</button>
           <MovieForm
             input={this.state.input}
             onChange={this.handleChange}

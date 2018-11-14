@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+html {
+  background: black;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -29,9 +33,9 @@ h1 {
 form {
   display: flex;
   width: 600px;
-  text-align: right;
   align-items: center;
   margin-left: 100px;
+  right: 0;
 }
 
 .input {
@@ -52,7 +56,7 @@ form {
 }
 
 .MovieList {
-  background: black;
+  /* background: black; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -65,4 +69,36 @@ form {
   width: 342px;
   height: 513px;
   padding: 5px;
+}
+
+.moviedetail {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 342px;
+  height: 513px;
+  padding: 0px;
+  margin: 0px 5px 0px 5px;
+  background-color: white;
+  overflow: scroll;
+  background: gainsboro;
+}
+
+#movietitle {
+  padding-left: 30px;
+  padding-right: 27px;
+  font-size: 2.8em;
+  margin: 0px;
+  margin-top: 20px;
+}
+
+#releasedate {
+  padding-left: 30px;
+  padding-right: 27px;
+}
+
+#overview {
+  margin: 0px;
+  padding-left: 30px;
+  padding-right: 27px;
 }

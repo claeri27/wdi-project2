@@ -10,8 +10,8 @@ function getMovies(input) {
   return resp;
 }
 
-function getPopular() {
-  const BASE_URL = `https://api.themoviedb.org/3/movie/popular?api_key=aa4028a6dba37dd82b8e185fa521fe08&language=en-US`;
+function getTopRated() {
+  const BASE_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=aa4028a6dba37dd82b8e185fa521fe08&language=en-US`;
   const resp = axios.get(BASE_URL);
   return resp;
 }
@@ -30,7 +30,7 @@ function getUpcoming() {
 
 export {
   getMovies,
-  getPopular,
+  getTopRated,
   getNowPlaying,
   getUpcoming
 }
