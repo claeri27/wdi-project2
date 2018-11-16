@@ -5,13 +5,13 @@ The purpose of this site is to find and display movie data easily. Users can cho
 
 ## MVP
 
-#### Components:
+### Components:
 MovieForm.js - Search bar input
 MovieList.js - Where and how the movies are displayed
 MoviePoster.js - Each individual movie displayed in MovieList
 Filler.js - Welcome screen
 
-#### Features:
+### Features:
 Pull movies from an API and display them on screen.
 
 Search through movies with user input.
@@ -22,7 +22,7 @@ Be able to press the movie poster and see movie details
 
 ## POST MVP
 
-#### Features:
+### Features:
 Search bar that searches as user types - COMPLETE
 
 Choose how the movies are viewed by having two view states - a poster view and a details view. - COMPLETE
@@ -47,7 +47,7 @@ React, axios
 
 ## Code Snippet
 
-####Ternary within Ternary
+### Ternary within Ternary
 
 {this.props.movies.map(movie =>
   this.state.currentMovie === movie.id ?
