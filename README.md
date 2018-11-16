@@ -48,7 +48,7 @@ React, axios
 ## Code Snippet
 
 ### Ternary within Ternary
-
+```javascript
 {this.props.movies.map(movie =>
   this.state.currentMovie === movie.id ?
   <div className='moviedetail' onClick={e => {
@@ -79,6 +79,7 @@ React, axios
     </div>
   </div>
 )}
+```
 
 ## Potential Issues & Solutions:
 
