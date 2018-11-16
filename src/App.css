@@ -13,47 +13,174 @@ html {
   background: red;
   align-items: center;
   height: 60px;
+  justify-content: flex-start;
+}
+
+/* form {
+  margin-left: auto;
+} */
+
+#settings {
+  margin: 0px 5px 0px 5px;
+  font-size: 1.5em;
+  color: black;
+  background: red;
+  border: 0px;
+  padding: 15px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#settings:focus {
+  outline: none;
+}
+
+#settings:hover {
+  color: blue;
+}
+
+#settings:active {
+  transform: translateY(2px);
+}
+
+#gridview {
+  margin: 0px 0px 0px auto;
+  font-size: 1.5em;
+  color: black;
+  background: red;
+  border: 0px;
+  padding: 15px;
+  padding-right: 10px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#gridview:focus {
+  outline: none;
+}
+
+#gridview:hover {
+  color: blue;
+}
+
+#gridview:active {
+  transform: translateY(2px);
+}
+
+#listview {
+  margin: 0px 15px 0px 0px;
+  font-size: 1.5em;
+  color: black;
+  background: red;
+  border: 0px;
+  padding: 15px;
+  padding-left: 10px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#listview:focus {
+  outline: none;
+}
+
+#listview:hover {
+  color: blue;
+}
+
+#listview:active {
+  transform: translateY(2px);
 }
 
 h1 {
   margin: 10px 20px 10px 20px;
   font-size: 2.5em;
+  cursor: default;
+  font-weight: lighter;
+  user-select: none;
+  font-family: 'Spicy Rice', cursive;
 }
 
 .button {
   /* margin: 10px 10px 10px 10px; */
-  height: 60px;
+  display: flex;
+  height: 38px;
   padding: 0px;
   width: 130px;
   font-size: 1em;
+  font-weight: bold;
+  border: 0px;
+  margin: 0px;
+  border-left: 4px solid black;
+  justify-content: center;
+  padding-top: 22px;
+  box-shadow: none;
+  background: salmon;
   /* border: 1px solid black; */
   /* border-radius: 20px; */
 }
 
-form {
-  display: flex;
-  width: 600px;
-  align-items: center;
-  margin-left: 100px;
-  right: 0;
+.button:hover {
+  border-top: 5px solid blue;
+  padding-top: 17px;
+  color: blue;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: translateY(2px);
+  border-top: 9px solid blue;
+}
+
+.button::selection {
+  text-shadow: none;
+}
+
+#toprated {
+  border-right: 5px solid black;
 }
 
 .input {
   height: 20px;
-  width: 500px;
+  width: 5vw;
   padding: 10px;
-  margin: 0px 5px 0px 0px;
+  margin: 0px 0px 0px 0px;
   font-size: 1em;
   font-weight: bold;
+  border-radius: 8px;
+  outline: none;
+  -webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+  border: none;
+  background: white;
 }
 
-.inputsubmit {
-  height: 50px;
+.input:focus {
+  width: 27vw;
+}
+
+.input::placeholder {
+  color: grey
+}
+
+.input::placeholder:hover {
+}
+
+.input:focus::placeholder {
+  color: white;
+}
+
+/* .inputsubmit {
+  height: 30px;
   margin: 0px 5px 0px 5px;
   padding: 0px;
-  width: 130px;
+  width: 80px;
   font-size: 1em;
-}
+  cursor: pointer;
+  border-radius: 8px;
+  outline: none;
+  font-weight: bold;
+} */
 
 .MovieList {
   /* background: black; */
@@ -63,31 +190,47 @@ form {
   padding-top: 5px;
   align-items: center;
   justify-content: center;
+
+  /* position: relative; */
 }
 
 .Movie {
   width: 342px;
   height: 513px;
   padding: 5px;
+  user-select: none;
+}
+
+.Movie:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.Movie:active {
 }
 
 .moviedetail {
   display: flex;
   flex-direction: column;
-  text-align: left;
   width: 342px;
   height: 513px;
   padding: 0px;
   margin: 0px 5px 0px 5px;
   background-color: white;
   overflow: scroll;
-  background: gainsboro;
+  background: black;
+  color: white;
+  cursor: default;
+  user-select: none;
+}
+
+.moviedetail:active {
 }
 
 #movietitle {
-  padding-left: 30px;
-  padding-right: 27px;
-  font-size: 2.8em;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 2.2em;
   margin: 0px;
   margin-top: 20px;
 }
@@ -101,4 +244,10 @@ form {
   margin: 0px;
   padding-left: 30px;
   padding-right: 27px;
+}
+
+.filler {
+  color: white;
+  display: flex;
+  flex-direction: column;
 }

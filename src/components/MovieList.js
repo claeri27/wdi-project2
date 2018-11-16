@@ -18,7 +18,7 @@ class MovieList extends Component {
   }
 
   render() {
-    console.log(this.props.movies);
+    // console.log(this.props.movies);
     return (
       <div className='MovieList'>
         {this.props.movies.map(movie =>

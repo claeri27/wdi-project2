@@ -6,7 +6,7 @@ import axios from 'axios';
 function getMovies(input) {
   const BASE_URL = `https://api.themoviedb.org/3/search/movie?api_key=aa4028a6dba37dd82b8e185fa521fe08&language=en-US&query=${input}`;
   const resp = axios.get(BASE_URL);
-  console.log(BASE_URL);
+  console.log(resp);
   return resp;
 }
 
@@ -28,9 +28,16 @@ function getUpcoming() {
   return resp;
 }
 
+function getCredits(id) {
+  const BASE_URL = 'https://api.themoviedb.org/3/movie/' + id + '/credits?&api_key=aa4028a6dba37dd82b8e185fa521fe08&language=en-US';
+  const resp = axios.get(BASE_URL);
+  return resp;
+}
+
 export {
   getMovies,
   getTopRated,
   getNowPlaying,
-  getUpcoming
+  getUpcoming,
+  getCredits
 }
