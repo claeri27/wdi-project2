@@ -10,7 +10,11 @@ class App extends Component {
     super(props);
     this.state = {
       movies: '',
-      input: ''
+      input: '',
+      gridView: true,
+      listView: false,
+      cast: '',
+      crew: '',
     }
     this.getMovies = this.getMovies.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -18,6 +22,8 @@ class App extends Component {
     this.getUpcoming = this.getUpcoming.bind(this);
     this.getNowPlaying = this.getNowPlaying.bind(this);
     this.getCredits = this.getCredits.bind(this);
+    this.changeGrid = this.changeGrid.bind(this);
+    this.changeList = this.changeList.bind(this);
   }
 
   componentDidMount() {
@@ -48,7 +54,7 @@ class App extends Component {
     const resp = await getUpcoming();
     this.setState({ movies: resp.data.results });
     console.log(this.state.movies, await getCredits(this.state.movies[0].id));
-    getCredits();
+    // getCredits();
   }
 
   async getNowPlaying() {
@@ -74,6 +80,28 @@ class App extends Component {
     });
   }
 
+  changeGrid() {
+    if(this.state.gridView === false) {
+      this.setState({
+        gridView: true,
+        listView: false
+      })
+    }
+    console.log('Gridview: ',this.state.gridView);
+    console.log('ListView: ', this.state.listView);
+  }
+
+  changeList() {
+    if(this.state.listView === false) {
+      this.setState({
+        listView: true,
+        gridView: false
+      })
+    }
+    console.log('GridView: ', this.state.gridView);
+    console.log('ListView: ', this.state.listView);
+  }
+
   render() {
     return (
       <div className="App">
@@ -82,8 +110,8 @@ class App extends Component {
           <div className='button' onClick={this.getNowPlaying}>NOW PLAYING</div>
           <div className='button' onClick={this.getUpcoming}>UPCOMING</div>
           <div id='toprated'  className='button' onClick={this.getTopRated}>TOP RATED</div>
-          <button className="fas fa-th-large" id='gridview'></button>
-          <button className="fas fa-list" id='listview'></button>
+          <button className="fas fa-th-large" id='gridview' onClick={this.changeGrid}></button>
+          <button className="fas fa-list" id='listview' onClick={this.changeList}></button>
           <MovieForm
             input={this.state.input}
             onChange={this.handleChange}
@@ -91,9 +119,7 @@ class App extends Component {
           />
           <button className="fas fa-cog" id='settings'></button>
         </nav>
-        <div className='MovieList'>
-          {this.state.movies ? <MovieList movies={this.state.movies}/> : <Filler />}
-        </div>
+        {this.state.movies ? <MovieList movies={this.state.movies} gridView={this.state.gridView} listView={this.state.listView}/> : <Filler />}
       </div>
     );
   }

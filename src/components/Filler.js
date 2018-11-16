@@ -3,11 +3,10 @@ import React from 'react';
 export default function Filler() {
   return (
     <div className ='filler'>
-      <h2>HELLO THIS IS A FILLER</h2>
-      <h2>HELLO THIS IS A FILLER</h2>
-      <h2>HELLO THIS IS A FILLER</h2>
-      <h2>HELLO THIS IS A FILLER</h2>
-      <h2>HELLO THIS IS A FILLER</h2>
+      <div className = 'welcomebox'>
+        <h2>Click here to search</h2>
+        <i className="fas fa-long-arrow-alt-up" id='uparrow'></i>
+      </div>
     </div>
   )
 }
