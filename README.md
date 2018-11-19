@@ -1,5 +1,6 @@
 # Movie Grabber
 
+Link to deployed site: invincible-home.surge.sh
 Link to screencast: https://youtu.be/zwxeatCnNWU
 
 The purpose of this site is to find and display movie data easily. Users can choose to see a list of movies and then filter the list according to what they want to see. There will be a search bar as well as 'Popular' and 'Now Playing' buttons. The list of movies will not display until the user presses a button.
@@ -9,8 +10,11 @@ The purpose of this site is to find and display movie data easily. Users can cho
 
 ### Components:
 MovieForm.js - Search bar input
+
 MovieList.js - Where and how the movies are displayed
+
 MoviePoster.js - Each individual movie displayed in MovieList
+
 Filler.js - Welcome screen
 
 ### Features:
