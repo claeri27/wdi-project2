@@ -284,7 +284,7 @@ h2 {
   color: white;
   border: 2px solid black;
   width: 80%;
-  height: auto;
+  /* height: auto; */
   display: flex;
   flex-direction: row;
   margin: 10px;
@@ -303,6 +303,7 @@ h2 {
 }
 
 #infooverview {
+  font-size: 1.5em;
 }
 
 .listpic {
@@ -313,6 +314,8 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 276px;
   text-align: left;
   margin-left: 40px;
+  overflow: scroll;
 }

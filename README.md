@@ -1,5 +1,7 @@
 # Movie Grabber
 
+Link to screencast: https://youtu.be/zwxeatCnNWU
+
 The purpose of this site is to find and display movie data easily. Users can choose to see a list of movies and then filter the list according to what they want to see. There will be a search bar as well as 'Popular' and 'Now Playing' buttons. The list of movies will not display until the user presses a button.
 
 
@@ -12,13 +14,13 @@ MoviePoster.js - Each individual movie displayed in MovieList
 Filler.js - Welcome screen
 
 ### Features:
-Pull movies from an API and display them on screen.
+Pull movies from an API and display them on screen - COMPLETE
 
-Search through movies with user input.
+Search through movies with user input - COMPLETE
 
-Have buttons that display a list of movies that are either Now Playing, Top Rated, or Upcoming.
+Have buttons that display a list of movies that are either Now Playing, Top Rated, or Upcoming - COMPLETE
 
-Be able to press the movie poster and see movie details
+Be able to press the movie poster and see movie details - COMPLETE
 
 ## POST MVP
 
@@ -86,5 +88,3 @@ React, axios
 Getting the API to return the movie poster images may be difficult. I'll solve this by getting help from teachers or researching google. I plan on implementing a lot of high quality css when I'm done so that will probably be the hardest part.
 
 ## Wireframes:
-
-The link to my surge is here: [Movie Grabber](https://github.com/facebook/create-react-app).

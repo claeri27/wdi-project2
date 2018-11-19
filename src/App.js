@@ -11,10 +11,10 @@ class App extends Component {
     this.state = {
       movies: '',
       input: '',
-      gridView: true,
-      listView: false,
       cast: '',
       crew: '',
+      gridView: true,
+      listView: false,
     }
     this.getMovies = this.getMovies.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -37,47 +37,40 @@ class App extends Component {
 
   async getMovies(e) {
     if (this.state.input) {
-      // e.preventDefault();
       const resp = await getMovies(this.state.input);
       this.setState({ movies: resp.data.results });
-      // console.log(this.state.movies);
     }
   }
 
   async getTopRated() {
     const resp = await getTopRated();
     this.setState({ movies: resp.data.results });
-    console.log(this.state.movies);
   }
 
   async getUpcoming() {
     const resp = await getUpcoming();
     this.setState({ movies: resp.data.results });
-    console.log(this.state.movies, await getCredits(this.state.movies[0].id));
-    // getCredits();
   }
 
   async getNowPlaying() {
     const resp = await getNowPlaying();
     this.setState({ movies: resp.data.results });
-    // console.log(this.state.movies);
   }
 
   async getCredits() {
     let cast = [];
     let crew = [];
-    for(let i = 0;i<this.state.movies.length;i++) {
-      console.log(this.state.movies);
-      // let thing = await getCredits(this.state.movies[i].id);
-      // console.log(thing);
-      // cast.push(thing.data.cast);
-      // crew.push(thing.data.crew);
-    }
-    console.log(cast, crew);
-    this.setState({
-      cast: cast,
-      crew: crew
-    });
+      for(let i = 0;i<this.state.movies.length;i++) {
+        let thing = await getCredits(this.state.movies[i].id);
+        // console.log(thing);
+        cast.push(thing.data.cast);
+        crew.push(thing.data.crew);
+      }
+      console.log(cast, crew);
+      this.setState({
+        cast: cast,
+        crew: crew
+      });
   }
 
   changeGrid() {
@@ -87,8 +80,6 @@ class App extends Component {
         listView: false
       })
     }
-    console.log('Gridview: ',this.state.gridView);
-    console.log('ListView: ', this.state.listView);
   }
 
   changeList() {
@@ -98,8 +89,6 @@ class App extends Component {
         gridView: false
       })
     }
-    console.log('GridView: ', this.state.gridView);
-    console.log('ListView: ', this.state.listView);
   }
 
   render() {
@@ -117,9 +106,18 @@ class App extends Component {
             onChange={this.handleChange}
             onClick={this.getMovies}
           />
-          <button className="fas fa-cog" id='settings'></button>
+          <button
+            className="fas fa-cog"
+            id='settings'>
+          </button>
         </nav>
-        {this.state.movies ? <MovieList movies={this.state.movies} gridView={this.state.gridView} listView={this.state.listView}/> : <Filler />}
+        {this.state.movies ?
+          <MovieList
+            movies={this.state.movies}
+            gridView={this.state.gridView}
+            listView={this.state.listView}/> :
+          <Filler
+        />}
       </div>
     );
   }

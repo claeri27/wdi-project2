@@ -10,7 +10,6 @@ class MovieList extends Component {
       gridView: this.props.gridView,
       listView: this.props.listView
     }
-    console.log(this.state.gridView, this.state.listView)
   }
 
   selectMovie(id) {
@@ -25,16 +24,11 @@ class MovieList extends Component {
   }
 
   render() {
-    // console.log(this.props.movies);
-    console.log('GridView: ', this.props.gridView, 'ListView: ', this.props.listView);
     return (
       <div className='MovieList'>
         {this.props.movies.map(movie =>
           this.state.currentMovie === movie.id ?
-          <div className='moviedetail' onClick={e => {
-            return (
-              this.selectMovie()
-            )}}>
+          <div className='moviedetail' onClick={e => {return (this.selectMovie())}}>
             <h2 id='movietitle'>{movie.title}</h2>
             <p id='releasedate'>{movie.release_date[0] + movie.release_date[1] + movie.release_date[2] + movie.release_date[3]}</p>
             <p id='overview'>{movie.overview}</p>
