@@ -1,6 +1,7 @@
 # Movie Grabber
 
 Link to deployed site: invincible-home.surge.sh
+
 Link to screencast: https://youtu.be/zwxeatCnNWU
 
 The purpose of this site is to find and display movie data easily. Users can choose to see a list of movies and then filter the list according to what they want to see. There will be a search bar as well as 'Popular' and 'Now Playing' buttons. The list of movies will not display until the user presses a button.
