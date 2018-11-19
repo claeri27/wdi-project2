@@ -1,6 +1,6 @@
 # Movie Grabber
 
-Link to deployed site: invincible-home.surge.sh
+Link to deployed site: https://invincible-home.surge.sh
 
 Link to screencast: https://youtu.be/zwxeatCnNWU
 
